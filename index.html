@@ -267,6 +267,43 @@ export default XXXXXXXXXXXXXX.Component.extend({
           </code></pre>
 				</section>
 				<section><img src="img/ember.jpeg" style="width: 1000px"></section>
+				<section>
+					<pre><code data-trim class="js" style="font-size: 3vh; line-height: 3vh">
+var app = app || {};
+
+(function ($) {
+	'use strict';
+
+
+	app.AppView = XXXXXXXXX.View.extend({
+
+		statsTemplate: _.template($('#stats-template').html()),
+		events: {
+			'keypress .new-todo': 'createOnEnter',
+			'click .clear-completed': 'clearCompleted',
+			'click .toggle-all': 'toggleAllComplete'
+		},
+
+		initialize: function () {
+			this.allCheckbox = this.$('.toggle-all')[0];
+			this.$input = this.$('.new-todo');
+			this.$footer = this.$('.footer');
+			this.$main = this.$('.main');
+			this.$list = $('.todo-list');
+		}
+		render: function () {
+			var completed = app.todos.completed().length;
+			var remaining = app.todos.remaining().length;
+		},
+
+
+		addOne: function (todo) {
+			var view = new app.TodoView({ model: todo });
+			this.$list.append(view.render().el);
+		},
+          </code></pre>
+				</section>
+				<section><img src="img/backbone.png" style="width: 1000px"></section>
 			</div>
 		</div>
 
