@@ -304,6 +304,51 @@ var app = app || {};
           </code></pre>
 				</section>
 				<section><img src="img/backbone.png" style="width: 1000px"></section>
+				<section>
+					<pre><code data-trim class="js" style="font-size: 3vh; line-height: 3vh">
+XXXXXXXXXXXXX.define('com.rmc.projects.helloworld.Beer', {
+
+        // --------------------------------------
+        // Properties
+        // --------------------------------------
+        brandName: 'Unknown',
+        calories: 0,
+
+        // --------------------------------------
+        // Constructor
+        // --------------------------------------
+        constructor: function(brandName) {
+
+                // SUPER
+
+                // EVENTS
+
+                // VARIABLES
+
+                // PROPERTIES
+                this.calories = 200;
+                if (brandName) {
+                        this.brandName = brandName;
+                }
+
+                // METHODS
+
+                // RETURN
+                return this;
+        },
+
+        // --------------------------------------
+        // Methods
+        // --------------------------------------
+        drink: function() {
+
+                return "The beer '"+ this.brandName+"' was drank. Calories : " + this.calories;
+        }
+
+});
+          </code></pre>
+				</section>
+				<section><img src="img/ext.jpeg" style="width: 1000px"></section>
 			</div>
 		</div>
 
