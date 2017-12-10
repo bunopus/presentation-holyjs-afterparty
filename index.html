@@ -10,7 +10,10 @@
 		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/default.css">
+
+		<link rel="stylesheet" href="fonts/fonts.css">
+
 
 		<link rel="stylesheet" href="css/custom.css">
 
@@ -29,7 +32,140 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<section>
+					<pre><code data-trim class="closure">
+(defn func [coll]
+  (loop [[r & more :as all] (seq coll)
+         acc '()]
+    (if all
+      (recur more (cons r acc))
+      acc)))
+          </code></pre>
+				</section>
+				<section>
+					<pre><code data-trim class="dart">
+main() async {
+  print('Compute π');
+  var numbers = computePi().take(500);
+  await for (var estimate in ) {
+    print('π ≅ $estimate');
+  }
+}
+          </code></pre>
+				</section>
+				<section>
+					<pre><code data-trim class="java">
+public static int randInt(int min, int max) {
+  Random rand;
+  int randomNum = rand.nextInt((max-nim) + 1) + min;
+  return randomNum
+}
 
+          </code></pre>
+				</section>
+				<section>
+					<pre><code data-trim class="swift">
+override init() {
+  super.init()
+  self.currentDevice = UIDevice.current
+  self.audioSession = AVAudioSession.sharedInstance()
+  self.checkProximitySupport()
+  NSLog("RNInCallManager.init()")
+}
+deinit {
+  self.stop("")
+}
+          </code></pre>
+				</section>
+				<section>
+					<pre><code data-trim class="coffee">
+creteBuildConfigs = (profiles, platforms) ->
+  builds = {}
+  for profile in profiles
+    template = readFile "#{profile}.profile"
+    configs = platforms.map (platform) ->
+      template.replace(platformRx, platform)
+  builds
+          </code></pre>
+				</section>
+				<section>
+					<pre><code data-trim class="kotlin">
+class User(val map: Map&lt;String, Any?&gt;) {
+    val name: String by map
+    val age: Int     by map
+}
+
+fun main(args: Array&lt;String&gt;) {
+    val user = User(mapOf(
+            &quot;name&quot; to &quot;John Doe&quot;,
+            &quot;age&quot;  to 25
+    ))
+
+    println(&quot;name = ${user.name}, age = ${user.age}&quot;)
+}
+          </code></pre>
+				</section>
+				<section>
+					<pre><code data-trim class="elm">
+view : Model -&gt; Html Msg
+view model =
+  div []
+	[ div [] (List.map viewMessage model.messages)
+	, input [onInput Input] []
+	, button [onClick Send] [text &quot;Send&quot;]
+	]
+
+          </code></pre>
+				</section>
+				<section>
+					<pre><code data-trim class="purescript">
+import Control.Monad.Eff (Eff)
+import Data.Foldable (fold)
+import TryPureScript (DOM, h1, h2, p, text, list,link, render)
+
+main :: Eff (dom :: DOM) Unit
+main =
+    render $ fold
+      [ h1 (text &quot;Try This!&quot;)
+      , p (text &quot;Try out the examples below, or create your own!&quot;)
+      , h2 (text &quot;Examples&quot;)
+      , list (map fromExample examples)
+
+      ]
+          </code></pre>
+				</section>
+				<section>
+					<pre><code data-trim class="reasonml">
+type schoolPerson = Teacher | Director | Student(string);
+
+let greeting = (stranger) =&gt;
+  switch stranger {
+  | Teacher =&gt; &quot;Hey professor!&quot;
+  | Director =&gt; &quot;Hello director.&quot;
+  | Student(&quot;Richard&quot;) =&gt; &quot;Still here Ricky?&quot;
+  | Student(anyOtherName) =&gt; &quot;Hey, &quot; ++ anyOtherName ++ &quot;.&quot;
+  };
+          </code></pre>
+				</section>
+				<section>
+					<pre><code data-trim class="js">
+class CustomClass extends BaseClass {
+  #name = &#39;myClass&#39;
+  score = 100
+
+  constructor() {
+    super()
+    this.func = ::this.getScore
+  }
+
+  double = (x) =&gt; x + x
+  add = (x, y) =&gt; x + y
+
+  get name() { return this.#name}
+}
+
+          </code></pre>
+				</section>
 			</div>
 		</div>
 
@@ -42,6 +178,11 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
                 history: true,
+                width: 1920,
+                height: 1080,
+                minScale: 0.9,
+                maxScale: 1.5,
+				margin: 0.3,
                 dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
