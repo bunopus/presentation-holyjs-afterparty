@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>blablabla</title>
+		<title>HolyJS afterparty</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
@@ -32,6 +32,9 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<section data-background-color="#3e8383">
+					<img src="img/pug.png" width="1500px">
+				</section>
 				<section>
 					<pre><code data-trim class="closure">
 (defn func [coll]
@@ -42,6 +45,7 @@
       acc)))
           </code></pre>
 				</section>
+				<section><img src="img/closure_1.jpg"><h1 class="fragment">(((((((((((((((())))))))))))))))</h1> </section>
 				<section><h1>Closure</h1></section>
 				<section>
 					<pre><code data-trim class="dart">
@@ -54,6 +58,8 @@ main() async {
 }
           </code></pre>
 				</section>
+				<section><img src="img/dart_1.png" style="width: 1500px"></section>
+				<section data-transition="none" data-background-transition="none"><img src="img/dart_2.png" style="width: 1500px"></section>
 				<section><h1>Dart</h1></section>
 				<section>
 					<pre><code data-trim class="java">
@@ -62,10 +68,11 @@ public static int randInt(int min, int max) {
   int randomNum = rand.nextInt((max-nim) + 1) + min;
   return randomNum
 }
-
           </code></pre>
 				</section>
-				<section><h1>Java</h1></section>
+				<section><img src="img/java_1.jpg" style="width: 1000px"> </section>
+				<section><img src="img/java_2.jpg" style="width: 1000px"> </section>
+				<section><h1>️Java</h1></section>
 				<section>
 					<pre><code data-trim class="swift">
 override init() {
@@ -80,6 +87,7 @@ deinit {
 }
           </code></pre>
 				</section>
+				<section data-background="img/swift_1.jpg"></section>
 				<section><h1>Swift</h1></section>
 				<section>
 					<pre><code data-trim class="coffee">
@@ -92,6 +100,8 @@ creteBuildConfigs = (profiles, platforms) ->
   builds
           </code></pre>
 				</section>
+				<section><img src="img/dart_1.png"></section>
+				<section><img src="img/coffee_1.png"></section>
 				<section><h1>Coffee</h1></section>
 				<section>
 					<pre><code data-trim class="kotlin">
@@ -110,6 +120,8 @@ fun main(args: Array&lt;String&gt;) {
 }
           </code></pre>
 				</section>
+				<section><img src="img/kotlin_1.jpg" style="width: 1500px"></section>
+				<section><img src="img/kotlin_2.jpg" style="width: 1500px"></section>
 				<section><h1>Kotlin</h1></section>
 				<section>
 					<pre><code data-trim class="elm">
@@ -123,12 +135,15 @@ view model =
 
           </code></pre>
 				</section>
+				<section><img src="img/elm_1.png" style="width: 1500px"></section>
+				<section><img src="img/elm_2.png" style="width: 1500px"></section>
+
 				<section><h1>Elm</h1></section>
 				<section>
 					<pre><code data-trim class="purescript">
 import Control.Monad.Eff (Eff)
 import Data.Foldable (fold)
-import TryPureScript (DOM, h1, h2, p, text, list,link, render)
+import TryXXXXXXXX (DOM, h1, h2, p, text, list,link, render)
 
 main :: Eff (dom :: DOM) Unit
 main =
@@ -141,6 +156,10 @@ main =
       ]
           </code></pre>
 				</section>
+				<section data-transition="none" data-background-transition="none"><img src="img/purescript_1.png" style="width: 1500px"></section>
+				<section data-transition="none" data-background-transition="none"><img src="img/purescript_2.png" style="width: 1500px"></section>
+				<section data-transition="none" data-background-transition="none"><img src="img/purescript_3.png" style="width: 1500px"></section>
+				<section data-transition="none" data-background-transition="none"><img src="img/purescript_4.png" style="width: 1500px"></section>
 				<section><h1>PureScript</h1></section>
 				<section>
 					<pre><code data-trim class="reasonml">
@@ -155,6 +174,7 @@ let greeting = (stranger) =&gt;
   };
           </code></pre>
 				</section>
+				<section><img src="img/reason_1.jpg" style="width: 1500px"></section>
 				<section><h1>ReasonML</h1></section>
 				<section>
 					<pre><code data-trim class="js">
@@ -175,7 +195,78 @@ class CustomClass extends BaseClass {
 
           </code></pre>
 				</section>
+				<section><img src="img/js_1.jpg" style="width: 1500px"></section>
 				<section><h1>JavaScript</h1></section>
+				<!--==========================-->
+				<section>
+					<pre><code data-trim class="html">
+&lt;div class=&quot;col-lg-4 col-sm-6 text-center&quot;&gt;
+      &lt;img class=&quot;img-circle img-responsive img-center&quot; {{bind-attr src=image}} alt=&quot;&quot;&gt;
+      &lt;h3&gt;{{name}}
+          &lt;small&gt;{{surname}}&lt;/small&gt;
+      &lt;/h3&gt;
+&lt;/div&gt;
+          </code></pre>
+				</section>
+				<section>
+					<pre><code data-trim class="typescript">
+@Component({selector: 'greet', template: template})
+class Hello {
+  name: string = 'Hello';
+  surname: string = 'World';
+}
+          </code></pre>
+				</section>
+				<section><img src="img/angular.svg" style="width: 1000px"></section>
+				<section>
+					<pre><code data-trim class="js">
+
+const HelloWorld = ({name}) =&gt; (
+ &lt;div&gt;{`Hi ${name}`}&lt;/div&gt;
+)
+
+export default HelloWorld;
+          </code></pre>
+				</section>
+				<section><img src="img/react.svg" style="width: 1000px"></section>
+				<section>
+					<pre><code data-trim class="js">
+new XXXXXXXX({
+  el: '#editor',
+  data: {
+    input: '# hello'
+  },
+  computed: {
+    compiledMarkdown: function () {
+      return marked(this.input, { sanitize: true })
+    }
+  },
+  methods: {
+    update: _.debounce(function (e) {
+      this.input = e.target.value
+    }, 300)
+  }
+})
+          </code></pre>
+				</section>
+				<section><img src="img/Vue.png" style="width: 1000px"></section>
+				<section>
+					<pre><code data-trim class="js">
+export default XXXXXXXXXXXXXX.Component.extend({
+        overDiv: false,
+        actions: {
+         over: function() {
+                this.toggleProperty('overDiv');
+         },
+         out: function() {
+                this.toggleProperty('overDiv');
+         }
+
+        }
+});
+          </code></pre>
+				</section>
+				<section><img src="img/ember.jpeg" style="width: 1000px"></section>
 			</div>
 		</div>
 
